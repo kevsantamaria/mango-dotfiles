@@ -1,0 +1,94 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "key": {
+      "width": 4,
+    },
+    "separator": "",
+  },
+  "logo": {
+    "type": "file-raw",
+    "source": "~/.config/fastfetch/logo.txt",
+    "color": { "1": "blue" },
+    "padding": {
+      "top": 1,
+      "left": 1,
+    },
+  },
+  "modules": [
+    "break",
+    {
+      "type": "command",
+      "key": "󰀄 ",
+      "keyColor": "red",
+      "text": "echo $USER@$(hostname)",
+    },
+	{
+  	  "type": "host",
+  	  "key": "󰌢 ",
+  	  "keyColor": "cyan",
+	},
+    {
+      "type": "os",
+      "key": "󰻀 ",
+      "keyColor": "blue",
+      "format": "{name} {version-id}",
+    },
+    {
+      "type": "command",
+      "key": " ",
+      "keyColor": "bright_green",
+      "text": "echo $(uname -r | cut -d- -f1) $(uname -m)",
+    },
+    {
+      "type": "packages",
+      "key": "󰏗 ",
+      "keyColor": "yellow",
+      "format": "pacman: {pacman}",
+    },
+    {
+      "type": "wm",
+      "key": "󱇛 ",
+      "keyColor": "red",
+    },
+    {
+      "type": "shell",
+      "key": "󰞷 ",
+      "keyColor": "white",
+      "format": "{pretty-name}",
+    },
+    {
+      "type": "memory",
+      "key": " ",
+      "keyColor": "cyan",
+      "format": "{used} / {total} ({percentage})",
+    },
+    {
+      "type": "disk",
+      "folders": "/",
+      "key": "󰋊 ",
+      "keyColor": "bright_yellow",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+    },
+    {
+      "type": "display",
+      "key": "󰍹 ",
+      "keyColor": "bright_blue",
+      "format": "{width}x{height} — {refresh-rate}Hz",
+    },
+    {
+      "type": "uptime",
+      "key": " ",
+      "keyColor": "white",
+    },
+    {
+      "type": "custom",
+      "format": " ",
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[33m󰮯   \u001b[32m󰊠 \u001b[31m󰊠 \u001b[33m󰊠 \u001b[35m󰊠 \u001b[36m󰊠 \u001b[90m󰊠 \u001b[34m󰊠 \u001b[93m󰊠 \u001b[95m󰊠 ",
+    },
+    "break",
+  ],
+}
