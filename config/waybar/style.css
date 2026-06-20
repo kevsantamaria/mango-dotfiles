@@ -1,0 +1,295 @@
+@define-color bg #181616;
+@define-color fg #c5c9c5;
+@define-color fg2 #a6a69c;
+@define-color border #a6a69c;
+@define-color cyan #7fb4ca;
+@define-color green #87a987;
+@define-color orange #b6927b;
+@define-color pink #e46876;
+@define-color purple #938aa9;
+@define-color red #c4746e;
+@define-color yellow #e6c384;
+@define-color white #c8c093;
+@define-color blue #7e9cd8;
+
+* {
+    border: 0px;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 12px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+/* --- Waybar ---*/
+window#waybar {
+    background-color: transparent;
+}
+
+#waybar > box {
+    padding: 2px 0;
+    border-radius: 2px;
+    margin: 0px 2px 3px 2px;
+    background-color: @bg;
+    box-shadow: 1px 1px 2px 0px #101010;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    min-height: 0px;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* --- Modules --- */
+
+#left1,
+#left3,
+#right,
+#right1 {
+    color: @fg2;
+    border-radius: 2px;
+    padding: 0px;
+    border: 1px solid @border;
+    margin: 2px 0px;
+}
+
+#left1:hover {
+    border: 1px solid @cyan;
+}
+
+.modules-center {
+    color: @fg2;
+}
+
+#left1 {
+    padding: 0 8px;
+    margin-left: 4px;
+}
+
+#left3 {
+    margin: 2px 0px;
+}
+
+#left4 {
+    margin-left: 4px;
+}
+
+#right {
+    margin: 2px 4px;
+    margin-right: 4px;
+}
+
+#right1 {
+    margin: 2px 0px;
+}
+
+/* --- Workspaces --- */
+
+#workspaces {
+    margin: 2px;
+    padding: 0px;
+}
+
+#workspaces button {
+    all: initial;
+    color: @fg;
+    background-color: @bg;
+    padding: 0 5px;
+    margin: 0px 2px;
+    border-radius: 2px;
+    border: 1.5px dashed @border;
+    opacity: 0.55;
+}
+
+#workspaces button.active {
+    background: @bg;
+    color: @fg;
+    opacity: 1;
+}
+
+#workspaces button.empty {
+    color: @fg;
+    background: @bg;
+    opacity: 0.35;
+}
+
+#workspaces button.empty.active {
+    color: @fg;
+    background-color: transparent;
+    opacity: 1;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+    color: @fg;
+    opacity: 1;
+}
+
+/* --- General Modules --- */
+
+#power-profiles-daemon,
+#power-profiles-daemon.performance,
+#power-profiles-daemon.balanced,
+#power-profiles-daemon.power-saver,
+#cava,
+#mpris,
+#tray,
+#memory,
+#cpu,
+#battery,
+#network,
+#backlight,
+#idle_inhibitor,
+#custom-updatespacman,
+#bluetooth,
+#pulseaudio,
+#custom-notification,
+#clock,
+#temperature,
+#disk,
+#custom-nightlight {
+    min-width: 14px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin: 0 2px 0 2px;
+}
+
+#custom-expand-icon2,
+#custom-expand-icon {
+    opacity: 1;
+    font-size: 11px;
+    color: @fg2;
+    padding: 0 5px;
+}
+
+/* --- Modules Hover --- */
+
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#mpris:hover,
+#battery:hover,
+#power-profiles-daemon:hover,
+#bluetooth:hover,
+#backlight:hover,
+#idle_inhibitor:hover,
+#custom-updatespacman:hover,
+#network:hover,
+#pulseaudio:hover,
+#temperature:hover,
+#disk:hover,
+#custom-nightlight {
+    color: @fg;
+    background-color: transparent;
+}
+
+#custom-os:hover {
+    color: @cyan;
+    background-color: transparent;
+}
+
+/* --- Tooltip --- */
+
+tooltip {
+    background: @bg;
+    font-size: 5px;
+    border: 0.5px solid alpha(@fg, 0.8);
+    border-radius: 4px;
+}
+
+tooltip label {
+    color: @fg;
+    font-weight: 700;
+}
+
+/* Specific Module */
+
+#custom-notification {
+    margin: 0 1px;
+}
+
+#custom-notification.notification {
+    color: @yellow;
+}
+
+#custom-notification.inhibited-notification {
+    color: @yellow;
+}
+
+#custom-notification.dnd-notification,
+#custom-notification.dnd-none,
+#custom-notification.dnd-inhibited-notification,
+#custom-notification.dnd-inhibited-none {
+    color: @border;
+    opacity: 0.35;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+#mpris {
+    color: @fg2;
+    animation: repeat;
+    animation-name: blink;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: @orange;
+    background-color: @bg;
+}
+
+#battery.full {
+    color: @green;
+}
+
+#battery.critical:not(.charging) {
+    background-color: @bg;
+    color: @red;
+    animation-name: blink2;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#temperature {
+    color: @blue;
+}
+
+#temperature.warning {
+    color: @yellow;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+/* --- Animations --- */
+
+@keyframes blink {
+    to {
+        color: #4a4a4a;
+    }
+}
+
+@keyframes blink-recording {
+    to {
+        color: @bg;
+    }
+}
+
+@keyframes blink2 {
+    to {
+        background-color: @bg;
+        color: #f53c3c;
+    }
+}

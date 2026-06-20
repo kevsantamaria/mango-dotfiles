@@ -1,0 +1,72 @@
+* {
+    bg:      #181616;
+    border:  #a292a3;
+    fg:      #c5c9c5;
+    fg2:     #0d0c0c;
+
+    background-color: transparent;
+    text-color:       @fg;
+    font:             "JetBrainsMono Nerd Font Propo 10";
+}
+
+configuration {
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    show-icons: true;
+}
+
+window {
+    background-color: @bg;
+    border-color:     @border;
+    border:           1;
+    border-radius:    2px;
+    width:            480px;
+    padding:          6px;
+}
+
+mainbox {
+    background-color: transparent;
+    padding:          4px;
+    spacing:          5px;
+}
+
+inputbar {
+    background-color: @fg2;
+    border-color:     @border;
+    border:           1;
+    border-radius:    2px;
+    padding:          4px 8px;
+    spacing:          4px;
+    children:         [entry];
+}
+
+entry {
+    color: @fg;
+}
+
+listview {
+    background-color: transparent;
+    spacing:          2px;
+    padding:          4px 0;
+    lines:            8;
+}
+
+element {
+    background-color: transparent;
+    border-radius:    2px;
+    padding:          4px 8px;
+}
+
+element-icon {
+    margin: 0 8px 0 0;
+}
+
+element selected {
+    background-color: @border;
+    color:            @fg2;
+}
+
+element-text {
+    background-color: transparent;
+    color:            inherit;
+}

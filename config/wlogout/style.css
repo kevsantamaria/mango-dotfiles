@@ -1,0 +1,90 @@
+@define-color bg #181616;
+@define-color fg #c5c9c5;
+@define-color fg2 #a6a69c;
+@define-color border #a6a69c;
+@define-color cyan #7fb4ca;
+@define-color green #87a987;
+@define-color orange #b6927b;
+@define-color pink #e46876;
+@define-color purple #938aa9;
+@define-color red #c4746e;
+@define-color yellow #e6c384;
+@define-color white #c8c093;
+@define-color blue #7e9cd8;
+
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-weight: bold;
+}
+
+window {
+    background-color: alpha(@bg, 0.85);
+}
+
+button {
+    border-radius: 8px;
+    border-color: @border;
+    border-style: solid;
+    border-width: 3px;
+    text-decoration-color: @fg;
+    color: @fg;
+    background-color: @bg;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    margin: 6px;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: @bg;
+    border-color: @purple;
+    color: @purple;
+    outline-style: none;
+}
+
+#lock {
+    background-image: image(
+        url("/home/kevin/.config/wlogout/images/lock.png"),
+        url("/usr/share/wlogout/icons/lock.png"),
+        url("/usr/local/share/wlogout/icons/lock.png")
+    );
+}
+#logout {
+    background-image: image(
+        url("/home/kevin/.config/wlogout/images/logout.png"),
+        url("/usr/share/wlogout/icons/logout.png"),
+        url("/usr/local/share/wlogout/icons/logout.png")
+    );
+}
+#suspend {
+    background-image: image(
+        url("/home/kevin/.config/wlogout/images/suspend.png"),
+        url("/usr/share/wlogout/icons/suspend.png"),
+        url("/usr/local/share/wlogout/icons/suspend.png")
+    );
+}
+#hibernate {
+    background-image: image(
+        url("/home/kevin/.config/wlogout/images/hibernate.png"),
+        url("/usr/share/wlogout/icons/hibernate.png"),
+        url("/usr/local/share/wlogout/icons/hibernate.png")
+    );
+}
+#shutdown {
+    background-image: image(
+        url("/home/kevin/.config/wlogout/images/shutdown.png"),
+        url("/usr/share/wlogout/icons/shutdown.png"),
+        url("/usr/local/share/wlogout/icons/shutdown.png")
+    );
+}
+#reboot {
+    background-image: image(
+        url("/home/kevin/.config/wlogout/images/reboot.png"),
+        url("/usr/share/wlogout/icons/reboot.png"),
+        url("/usr/local/share/wlogout/icons/reboot.png")
+    );
+}
