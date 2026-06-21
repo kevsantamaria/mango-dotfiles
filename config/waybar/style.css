@@ -182,7 +182,7 @@ window#waybar.empty #window {
 #pulseaudio:hover,
 #temperature:hover,
 #disk:hover,
-#custom-nightlight {
+#custom-nightlight:hover {
     color: @fg;
     background-color: transparent;
 }

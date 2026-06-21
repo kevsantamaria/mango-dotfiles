@@ -207,7 +207,10 @@
   // --- Right Modules
 
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    "hwmon-path": [
+      "/sys/class/hwmon/hwmon3/temp1_input",
+      "/sys/class/hwmon/hwmon4/temp1_input",
+    ],
     "critical-threshold": 80,
     "warning-threshold": 60,
     "format": " {temperatureC}°C",
@@ -249,6 +252,8 @@
       "warning": 20,
       "critical": 10,
     },
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%\nHealth: {health}% ({cycles} cycles)\n{timeTo}",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%\nHealth: {health}% ({cycles} cycles)\n{timeTo}",
   },
 
   // --- Tray & Expanders
