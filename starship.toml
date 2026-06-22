@@ -19,7 +19,7 @@ yellow = "#e6c384"
 white = "#c8c093"
 blue = "#7e9cd8"
 
-format = """$username$hostname$directory$sudo$git_branch$git_status$nodejs$python$rust$golang$fill\n$character"""
+format = """$username$hostname$directory$sudo$git_branch$git_status$fill\n$character"""
 scan_timeout = "50"
 
 [directory.substitutions]
@@ -67,7 +67,6 @@ Fedora = " "
 Pop = " "
 Kali = " "
 CachyOS = "  "
-
 
 [git_branch]
 symbol = " "

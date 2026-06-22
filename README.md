@@ -8,8 +8,6 @@
         <br>
 </p>
 
----
-
 ## Overview
 
 > My personal Arch-based dots for MangoWM. Minimalist style with the Kanagawa Dragon palette. I use awww for the wallpaper, and the Waybar bar is [HANCORE-linux waybar theme 1.4](https://github.com/HANCORE-linux/waybar-themes#v14) adapted to the color palette and incorporating custom modules. The shell is zsh with oh-my-zsh, with a prompt built using Starship, and I use foot as the terminal. I recommend a Nerd Font so everything looks nicer — I use JetBrains Mono Nerd Font.
