@@ -273,8 +273,9 @@
   },
 
   "tray": {
-    "icon-size": 10,
-    "spacing": 1,
+    "icon-size": 11,
+    "show-passive-items": true,
+    "spacing": 5,
   },
 
   "group/tray-expander2": {
