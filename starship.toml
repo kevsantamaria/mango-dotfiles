@@ -1,6 +1,7 @@
 add_newline = false
 
 palette = "kanagawa-dragon"
+scan_timeout = 100
 
 [palettes.kanagawa-dragon]
 
@@ -20,7 +21,6 @@ white = "#c8c093"
 blue = "#7e9cd8"
 
 format = """$username$hostname$directory$sudo$git_branch$git_status$fill\n$character"""
-scan_timeout = "50"
 
 [directory.substitutions]
 "Escritorio" = "󰟀 "
@@ -104,3 +104,6 @@ disabled = false
 time_format = "%H:%M"
 style = "cyan"
 format = "[$time]($style)"
+
+[battery]
+disabled = true
